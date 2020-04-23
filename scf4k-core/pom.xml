@@ -4,7 +4,7 @@
     <parent>
         <artifactId>scf4k</artifactId>
         <groupId>com.github.squirrelgrip</groupId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>scf4k-core</artifactId>
     <packaging>jar</packaging>
