@@ -9,7 +9,7 @@
 
     <artifactId>scf4k-core</artifactId>
     <name>${project.groupId}:${project.artifactId}</name>
-env | sort
+
     <dependencies>
         <dependency>
             <groupId>com.google.guava</groupId>
