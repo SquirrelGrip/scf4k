@@ -100,6 +100,7 @@
                 <plugin>
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
+                    <version>${kotlin.version}</version>
                     <configuration>
                         <args>
                             <arg>-Xjsr305=strict</arg>
@@ -247,7 +248,7 @@
                     <configuration>
                         <reportUndocumented>false</reportUndocumented>
                         <sourceDirectories>
-                            <sourceDirectory>src/main/kotlin</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
                         </sourceDirectories>
                         <jdkVersion>8</jdkVersion>
                     </configuration>
@@ -264,6 +265,52 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.jetbrains.kotlin</groupId>
+                <artifactId>kotlin-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.manamind.jgitflow</groupId>
+                <artifactId>jgitflow-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.jetbrains.dokka</groupId>
+                <artifactId>dokka-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.github.squirrelgrip</groupId>
+                <artifactId>travis-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 
     <distributionManagement>
